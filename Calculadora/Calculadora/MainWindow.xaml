@@ -1,0 +1,35 @@
+﻿<Window x:Class="Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculadora"
+        mc:Ignorable="d"
+        Title="Calculadora Allan Amador" Height="438.83" Width="552.66">
+    <Grid Margin="0,0,2,-8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="380*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblTitulo" Content="Calculadora" HorizontalAlignment="Left" Margin="35,38,0,0" VerticalAlignment="Top" Width="176" Grid.Column="1" FontFamily="Lucida Handwriting" FontSize="22" Height="40"/>
+        <Label x:Name="lblOperando1" Content="Digite el primer operando" Grid.Column="1" HorizontalAlignment="Left" Margin="35,121,0,0" VerticalAlignment="Top" Width="252" FontFamily="Lucida Console" FontSize="16" Height="26"/>
+        <Label x:Name="lblOperando2" Content="Digite el segundo operando" Grid.Column="1" HorizontalAlignment="Left" Margin="35,170,0,0" VerticalAlignment="Top" Width="270" FontFamily="Lucida Console" FontSize="16" Height="26"/>
+        <ComboBox x:Name="cbOperadores" Grid.Column="1" HorizontalAlignment="Left" Margin="312,226,0,0" VerticalAlignment="Top" Width="131" IsSynchronizedWithCurrentItem="True" Height="22">
+            <ComboBoxItem Content="Suma"/>
+            <ComboBoxItem Content="Resta"/>
+            <ComboBoxItem Content="División"/>
+            <ComboBoxItem Content="Multiplicación"/>
+            <ComboBox.ItemBindingGroup>
+                <BindingGroup/>
+            </ComboBox.ItemBindingGroup>
+        </ComboBox>
+        <TextBox x:Name="txtOperador1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="312,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" FontSize="16"/>
+        <TextBox x:Name="txtOperador2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="312,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" FontSize="16"/>
+        <Label x:Name="lblOperando2_Copy" Content="Elija el operador" Grid.Column="1" HorizontalAlignment="Left" Margin="35,222,0,0" VerticalAlignment="Top" Width="270" FontFamily="Lucida Console" FontSize="16" Height="26"/>
+        <Button x:Name="btnCalcular" Content="Calcular" Grid.Column="1" HorizontalAlignment="Left" Margin="190,338,0,0" VerticalAlignment="Top" Width="169" FontSize="24" FontFamily="Lucida Calligraphy" Height="47" Click="btnCalcular_Click"/>
+        <Label x:Name="lblResultado" Content="Resultado" Grid.Column="1" HorizontalAlignment="Left" Margin="35,275,0,0" VerticalAlignment="Top" Width="270" FontFamily="Lucida Console" FontSize="16" Height="26"/>
+        <TextBox x:Name="txtResultado" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="312,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" FontSize="16" IsReadOnly="True"/>
+
+    </Grid>
+</Window>
